@@ -31,7 +31,9 @@ def validate_data(values):
     Raises ValueError if strings cannot be converted into into,
     or if there aren't 6 values.
     """
+    print(values)
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f"6 values are required, you provided {len(values)}"
